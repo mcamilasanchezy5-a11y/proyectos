@@ -1,0 +1,137 @@
+body{
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(-45deg, #eef2ff, #ffffff, #f8fafc, #eef2ff);
+    background-size: 400% 400%;
+    animation: fondoSuave 12s ease infinite;
+    color:#222;
+}
+
+@keyframes fondoSuave{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+header{
+background:linear-gradient(135deg,#111827,#1f2937);
+color:white;
+text-align:center;
+padding:120px 20px;
+}
+
+header h1{
+    font-size:4rem;
+    font-weight:800;
+    margin-bottom:20px;
+    animation: aparecer 1.2s ease-out;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform: translateY(-30px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+header p{
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+.proyecto{
+    width:85%;
+    max-width:1100px;
+    margin:50px auto;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.proyecto:hover{
+    transform: translateY(-8px);
+    box-shadow:0 20px 50px rgba(0,0,0,0.12);
+}
+
+.proyecto h2{
+font-size:2rem;
+margin-bottom:20px;
+color:#111827;
+}
+
+.proyecto p{
+margin-top:20px;
+line-height:1.8;
+color:#555;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:15px;
+}
+
+.galeria img{
+    width:100%;
+    height:auto;
+    max-height:300px;
+    object-fit:contain;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.galeria img:hover{
+    transform: scale(1.08);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+video{
+    width:100%;
+    max-width:900px;
+    display:block;
+    margin:auto;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.timeline{
+text-align:center;
+}
+
+.timeline p{
+font-size:1.1rem;
+margin:10px 0;
+}
+body::before{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    background: rgba(99,102,241,0.08);
+    top:20%;
+    left:10%;
+    filter: blur(120px);
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:300px;
+    height:300px;
+    background: rgba(148,163,184,0.08);
+    bottom:10%;
+    right:10%;
+    filter: blur(100px);
+    z-index:-1;
+}
