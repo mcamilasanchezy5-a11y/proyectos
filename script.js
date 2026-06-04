@@ -1,5 +1,6 @@
 const modal = document.createElement("div");
 modal.classList.add("modal");
+
 modal.innerHTML = `
     <span class="close">&times;</span>
     <img id="modalImg">
